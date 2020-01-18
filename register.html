@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--utf-8 enebtan normalurad samushaod-->
+		<meta charset="utf-8">
+        <title>IT-World</title>
+        <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet">
+        <meta name="description" content="it academy">
+        <meta name="keywords" content="html, css, academy, learning, lessons, programming, web development">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://use.fontawesome.com/ef7e846aad.js"></script>
+		<!--css file-s gamodzaxeba-->
+  	<link rel="stylesheet" href="css/accounts.css">
+    <link rel="stylesheet" href="css/links.css">
+
+   	<script>
+   		function Validate(inputText)
+			{
+			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			if(inputText.value.match(mailformat))
+			{
+			document.form.email.password.focus();
+			return true;
+			}
+			else
+			{
+			alert("You have entered an invalid email address!");
+			document.form.email.password.focus();
+			return false;
+			}
+			}
+   	</script>
+   	<script type="text/javascript">
+
+  function checkPassword(str)
+  {
+    // at least one number, one lowercase and one uppercase letter
+    // at least six characters that are letters, numbers or the underscore
+    var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$/;
+    return re.test(str);
+  }
+
+</script>
+
+</head>
+<body onload='document.form.email.focus()'>
+	<header>
+    <img id="logo" src="images/logo 2.png">
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-menu-btn">
+      <i class="fa fa-bars" ></i>
+    </label>
+
+    <ul class="menu">
+        <li class="link"><a href="index.html">Home</a></li>
+        <li class="link"><a href="contact.html">contact</a></li>
+        <li class="added"><a href="register.html">register</a></li>
+        <li class="reg"><a href="register.html"><button class="headerbtn">register</button></a></li>
+      <label for="chk" class="hide-menu-btn">
+        <i class="fa fa-times"></i>
+      </label>
+    </ul>
+	</header>
+	<form  name="form" action="#">
+		<div class="input-group">			
+			<input type="username" placeholder="username" id="username" name="username" >
+		</div>
+		<br>
+
+		<div class="input-group">			
+			<input type="email" placeholder="email" id="email" name="email" >
+		</div>
+		<br>
+
+		<div class="input-group">
+			<input type="password" placeholder="password" id="password" name="password_1">
+		</div>
+		<br>
+
+		<div class="input-group">			
+			<input type="password" placeholder="confirm password" id="confirm" name="password_2">
+		</div>
+		<br>
+
+		<div class="input-group">			
+			<input type="country" placeholder="country" id="country" name="country" >
+		</div>
+			<br>
+
+		<div class="input-group">			
+			<input type="city" placeholder="city" id="city" name="city" >
+		</div>
+			<br>
+
+		<br>
+			<div id="messageShow"></div>
+
+		<div class="button">
+			<button type="submit" onclick="Validate(document.form.email)"/ class="btn" name="submit">Register</button>
+		</div>
+		<p>
+		 <a href="login.html">   Sign in</a>
+		</p>
+		<br>
+		<div class="regdate">
+			<p id="date"></p>
+				<script>n =  new Date();
+					y = n.getFullYear();
+					m = n.getMonth() + 1;
+					d = n.getDate();
+					document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+				</script>
+        </div>
+	</form>
+		<footer>Giorgi Lezhava-sakurso®</footer>
+</body>
+</html>
